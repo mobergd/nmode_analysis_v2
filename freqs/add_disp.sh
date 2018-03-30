@@ -26,9 +26,9 @@
 
   ln -s ../../vibfreq.dat
   ln -s ../../VIBxyz.xyz
-  ln -s ../../CONFIG.01
+  ln -s ../../../CONFIG.01
 
-  head -4 CONFIG.01 > cell
+  head -5 CONFIG.01 > cell
 
   ../generate_OH_freq_list.sh ${nmol}
 

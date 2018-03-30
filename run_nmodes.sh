@@ -22,6 +22,9 @@ mpirun -np 16 $DLPOLY
 cd ../
 
 cd split_runs/
-#./submit_jobs.sh 2515 3234  # 360 molecules
-#./submit_jobs.sh 2683 3450   # 384 molecules
-./submit_jobs.sh 2263 2910  # 324 molecules
+###./submit_jobs.sh {9*Nwat-6 - 2*Nwat+1} {9*Nwat-6}
+./submit_jobs.sh 2515 3234  # 360 molecules: Ih, XI, XV
+#./submit_jobs.sh 2263 2910  # 324 molecules: IX
+#./submit_jobs.sh 2683 3450  # 384 molecules: VIII
+#./submit_jobs.sh 5287 6798  # 756 molecules: XIII
+#./submit_jobs.sh 5371 6906  # 768 molecules: II
