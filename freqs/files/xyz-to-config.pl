@@ -22,15 +22,15 @@ while (<STDIN>) {
 my $nR = scalar @R;
 die unless $nR == 3*$N;
 
-my @box = (22.57, 23.46, 22.12);
+#my @box = (22.57, 23.46, 22.12);
 
 # dump CONFIG
 
-printf "generated from an XYZ file\n";
-printf "%10i%10i%10i%20.10f\n", 2, 2, 0, 0.0;
-printf "%20.10f%20.10f%20.10f\n", $box[0], 0.0, 0.0;
-printf "%20.10f%20.10f%20.10f\n", 0.0, $box[1], 0.0;
-printf "%20.10f%20.10f%20.10f\n", 0.0, 0.0, $box[2];
+#printf "generated from an XYZ file\n";
+#printf "%10i%10i%10i%20.10f\n", 2, 2, 0, 0.0;
+#printf "%20.10f%20.10f%20.10f\n", $box[0], 0.0, 0.0;
+#printf "%20.10f%20.10f%20.10f\n", 0.0, $box[1], 0.0;
+#printf "%20.10f%20.10f%20.10f\n", 0.0, 0.0, $box[2];
 
 for (my $n = 0; $n < $N; ++$n) {
     my $name = ($n % 3 == 0 ? 'OW' : 'HW');

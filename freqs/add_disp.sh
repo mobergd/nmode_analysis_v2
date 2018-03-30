@@ -26,6 +26,9 @@
 
   ln -s ../../vibfreq.dat
   ln -s ../../VIBxyz.xyz
+  ln -s ../../CONFIG.01
+
+  head -4 CONFIG.01 > cell
 
   ../generate_OH_freq_list.sh ${nmol}
 
@@ -50,7 +53,7 @@
   mv config0000 initial/
   cd initial/
   ../files/xyz-to-config.pl < config0000 > initial_config
-  cat initial_config ../files/msite_$nmol > CONFIG.01
+  cat ../cell initial_config ../files/msite_$nmol > CONFIG.01
   cp ../files/CONTROL ../files/FIELD .
   cd ..
 
@@ -73,7 +76,7 @@
       #converts all xyz files to CONFIG files w/ M sites
       cd freq_$i
       ./xyz-to-config.pl < disp$i > disp_config
-      cat disp_config msite_$nmol > CONFIG.01
+      cat ../cell disp_config msite_$nmol > CONFIG.01
       cd ..
     else
       count=$((count++))
